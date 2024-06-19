@@ -4,7 +4,6 @@ import random
 racine = tk.Tk()
 racine.title('Taquin')
 
-seuil = 50000
 shuffling = 10
 animation_delai = 500
 visited = []
@@ -62,7 +61,7 @@ def bfs():
     visited.append(init)
     q = Queue()
     q.enqueue(init)
-    while q.lst_in()!=goal:# and len(visited)<seuil:
+    while q.lst_in()!=goal:
         v = q.dequeue()
         neighbours = find_neighbours(v)
         for u in neighbours:
